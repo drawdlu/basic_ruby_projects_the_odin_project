@@ -1,1 +1,6 @@
-# ruby_practice_caesar_cipher
+# Practice Problems
+
+## Caesar Cipher
+## Sub Strings
+## Stock Picker
+## Bubble Sort
