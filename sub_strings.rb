@@ -1,17 +1,19 @@
 def substrings (string, sub_arr)
   sub_arr.reduce({}) do |hash, arr_word|
     sum = string.split(" ").reduce(0) do |count, string_word|
-      if string_word.downcase.include?(arr_word)
-        count += 1
-      else 
-        count
-      end
-    end
+            if string_word.downcase.include?(arr_word)
+              count += 1
+            else 
+              count
+            end
+          end
 
     if sum > 0
       hash[arr_word] = sum
     end
+
     hash
+    
   end
 end
 
