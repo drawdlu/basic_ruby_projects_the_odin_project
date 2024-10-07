@@ -12,9 +12,8 @@ def bubble_sort(array)
 
       next_item = array[index + 1]
       if item > next_item
-        temp = array[index]
         array[index] = next_item
-        array[index + 1] = temp
+        array[index + 1] = item
         no_swaps_made = false
       end
     end
