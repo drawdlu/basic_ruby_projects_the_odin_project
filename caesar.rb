@@ -5,9 +5,9 @@ def caesar_cipher(text, key)
   (text.split("").map do |char|
     if is_letter?(char)
       if is_uppercase?(char)
-        get_cipher(char, UPPERCASE)
+        get_cipher(char, UPPERCASE, key)
       else
-        get_cipher(char, LOWERCASE)
+        get_cipher(char, LOWERCASE, key)
       end
     else
       char
@@ -15,8 +15,8 @@ def caesar_cipher(text, key)
   end).join
 end
 
-def get_cipher(char, letter)
-  ((((char.ord - letter.ord) + 5) % 26) + letter.ord).chr
+def get_cipher(char, letter, key)
+  ((((char.ord - letter.ord) + key) % 26) + letter.ord).chr
 end
 
 def is_letter?(character) 
@@ -27,5 +27,4 @@ def is_uppercase?(character)
   character == character.upcase
 end
 
-p caesar_cipher("What a string!", 5)
-#=> "Bmfy f xywnsl!"
+puts caesar_cipher('aaa', 1)
